@@ -5,6 +5,11 @@
 
 #define OPT_APPEND	'a'
 #define OPT_RAMDISK	'r'
+#define OPT_DEVTREE	's'
+
+//#define OPT_APPEND	(OPT_MAX+1)
+//#define OPT_RAMDISK	(OPT_MAX+2)
+//#define OPT_DEVTREE	(OPT_MAX+3)
 
 /* Options relevant to the architecture (excluding loader-specific ones),
  * in this case none:
@@ -33,8 +38,9 @@
 	{ "command-line",	1, 0, OPT_APPEND },	\
 	{ "append",		1, 0, OPT_APPEND },	\
 	{ "initrd",		1, 0, OPT_RAMDISK },	\
-	{ "ramdisk",		1, 0, OPT_RAMDISK },
+	{ "ramdisk",		1, 0, OPT_RAMDISK },	\
+	{ "devtree",		1, 0, OPT_DEVTREE },
 
-#define KEXEC_ALL_OPT_STR KEXEC_ARCH_OPT_STR "a:r:"
+#define KEXEC_ALL_OPT_STR KEXEC_ARCH_OPT_STR "a:r:s:"
 
 #endif /* KEXEC_ARCH_ARM_OPTIONS_H */
