@@ -10,8 +10,7 @@ BUILDING
 You *must* use bash, and not zsh or any other shell!
 
 To build, edit envsetup.sh to point to your compiled kernel sources and
-Android NDK directory. Then, run envsetup.sh and make. You'll then have
-a nice, fresh kexec_load.ko file as the output.
+Android NDK directory.
 
 ./bootstrap
 ./envsetup.sh
@@ -25,3 +24,5 @@ CPPFLAGS=-I/opt/android-ndk/platforms/android-8/arch-arm/ \
 LDFLAGS=--sysroot=/opt/android-ndk/platforms/android-8/arch-arm/
 
 make
+
+Then, copy the binaries from /build/sbin/* to your device, and the move them to the /system/bin directory, and chmod them 770 to make them executable.
