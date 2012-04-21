@@ -13,7 +13,7 @@ To build, edit envsetup.sh to point to your compiled kernel sources and
 Android NDK directory.
 
 ./bootstrap
-./envsetup.sh
+source envsetup.sh
 
 (modify the below to suit your needs)
 
