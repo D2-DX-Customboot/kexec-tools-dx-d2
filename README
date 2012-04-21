@@ -1,0 +1,21 @@
+This is the standard kexec-tools master branch, except I had to modify 
+to just return 0 for the time being, until I find a way to reimplement the 
+functionality using only libs from the 2.6.39 motorola droidX/droid2 kernel.
+
+-Matt Parnell/ilikenwf
+===========
+BUILDING
+===========
+
+./bootstrap
+./envsetup.sh
+
+(modify the below to suit your needs)
+
+LDFLAGS=-static ./configure \
+--host=arm CC=/opt/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc \
+CFLAGS=--sysroot=/opt/android-ndk/platforms/android-8/arch-arm/ \
+CPPFLAGS=-I/opt/android-ndk/platforms/android-8/arch-arm/ \
+LDFLAGS=--sysroot=/opt/android-ndk/platforms/android-8/arch-arm/
+
+make
