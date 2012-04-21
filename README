@@ -7,6 +7,12 @@ functionality using only libs from the 2.6.39 motorola droidX/droid2 kernel.
 BUILDING
 ===========
 
+You *must* use bash, and not zsh or any other shell!
+
+To build, edit envsetup.sh to point to your compiled kernel sources and
+Android NDK directory. Then, run envsetup.sh and make. You'll then have
+a nice, fresh kexec_load.ko file as the output.
+
 ./bootstrap
 ./envsetup.sh
 
