@@ -1,0 +1,9 @@
+Smaller kexec tools
+"ls came back from berkeley waving flags"
+
+mkexec [kernel]
+	Executes a kernel, no questions asked.
+
+imgexec [start_address] [image]
+	Loads a binary image into ram starting at start_address then jumps to
+	start address.
